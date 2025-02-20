@@ -1,0 +1,26 @@
+
+#include <stdio.h>                                                                                                   # <stdio.h> it is libraby for the c programming statements like: printf(),scanf(),if,else,else if,return etc.
+
+int main() {                                                                                                         # int is diclaration for integer values.
+    int custno, unit;                                                                                                # here the program take integer value for costno and unit  Like: 1,2,3,12,234,34,5645,684,634
+    float charge;                                                                                                    # here the program take float value for charge Like: 12.4, 650.6 etc
+    
+    printf("Enter customer number and unit: ");                                                                      # taking customer number and unit by printf
+    scanf("%d %d", &custno, &unit);                                                                                  # checking input values in scanf by %d. %d filter only integer values.
+   
+    if (unit <= 200) {                                                                                               # if condition to calculate the sum
+        charge = 0.5 * unit;                                                                                         # if input unit is less than or equal 200, than your charge par unit 0.5
+    } 
+    else if (unit <= 400) {                                                                                          # else if confition to continue the program.
+        charge = 0.65 * (unit - 200) + 200 * 0.5;                                                                    # if input unit is less than or equal 400, than for the first 200 unit=200*0.5 and last 200 unit=200*0.65 
+    } 
+    else if (unit <= 600) {                                                                                          #else if confition to continue the program.
+        charge = 0.8 * (unit - 400) + 200 * 0.5 + 200 * 0.65;                                                        # if input unit is less than or equal 600, than for the first 200 unit=200*0.5 ,for the second 200 unit=200*0.65 and the last 200 unit=200*0.8
+    }
+    else {                                                                                                           #else if confition to continue the program.
+        charge = 1.0 * (unit - 600) + 200 * 0.5 + 200 * 0.65 + 200 * 0.8;                                            # if the input charge is more than 600, than for the first 200 unit=200*0.5 ,for the second 200 unit=200*0.65 and the last 200 unit=200*0.8 and extra unit=extra unit*1.0
+    } 
+    printf("\nFor customer number %d with %d units, the charge is %.2f tk\n", custno, unit, charge);                 #finally print the value of unit
+
+    return 0;                                                                                                        # return 0 for end the program
+}
