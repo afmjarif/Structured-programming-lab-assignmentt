@@ -22,5 +22,5 @@ int main() {                                                                    
     } 
     printf("\nFor customer number %d with %d units, the charge is %.2f tk\n", custno, unit, charge);                 #finally print the value of unit
 
-    return 0;                                                                                                        # return 0 for end the program
+    return 0;                                                                                                        # return 0 for end the program.
 }
